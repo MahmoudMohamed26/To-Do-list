@@ -13,6 +13,7 @@ getFromLocalStorage();
 
 add.onclick = function () {
   if (input.value != "") {
+    input.style.border = ""
     addTaskToArray(input.value);
     input.value = "";
   } else {
