@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: #F7E2DF;
+    --secondry-color: #0D3141;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: linear-gradient(to right ,#505354 , var(--secondry-color) 50%);
+}
+
+.header {
+    font-size: 35px;
+    color: var(--main-color);
+    text-align: center;
+    margin-top: 200px !important;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    user-select: none;
+}
+
+@keyframes fadeing{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.header::before{
+    content: "";
+    width: 2px;
+    height: 85%;
+    background-color: whitesmoke;
+    position: absolute;
+    right: -5px;
+    animation: fadeing 1s infinite;
+}
+
+.form {
+    margin: auto;
+    width: fit-content;
+    position: relative;
+    text-align: center;
+}
+
+.form .add {
+    border-radius: 0.5em;
+    padding: 9px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--main-color);
+    transition: all 0.3s ease 0s;
+}
+
+.form .add:hover {
+    background-color: #f7cec6;
+}
+
+.form input {
+    background-color: #181A1A;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 0.5em;
+    outline: none;
+    color: white;
+    width: 400px;
+    transition: all 0.3s ease 0s;
+}
+
+.tasks {
+    margin: auto;
+    margin-top: 40px;
+    width: fit-content;
+}
+
+.tasks .icons {
+    display: flex;
+    gap: 10px;
+}
+
+.tasks .task {
+    width: 600px;
+    margin: auto;
+    color: grey;
+    background-color: #282828;
+    border-radius: 0.5em;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tasks .task p {
+    flex: 1;
+    user-select: none;
+}
+
+.tasks button {
+    border: none;
+    padding: 9px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.red:hover {
+    background-color: #740303;
+}
+
+.red {
+    background-color: #FF0000;
+    color: white;
+}
+
+.green:hover {
+    background-color: #024902;
+}
+
+.green {
+    background-color: #037803;
+    color: white;
+}
+
+.tasks .icons .icon {
+    padding: 10px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.task.done{
+    background-color: rgb(30, 58, 31);
+    border: 1px solid rgb(26, 255, 0);
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.allContainer {
+    width: fit-content;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.all {
+    border: none;
+    padding: 9px 15px;
+    outline: none;
+    background-color: #FF0000;
+    color: white;
+    border-radius: 0.5em;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 770px){
+    .task {
+        width: 350px !important;
+    }
+}
+
+@media (max-width: 536px){
+    .add{
+        margin-top: 40px;
+    }
+    .form input {
+        width: 350px;
+    }
+}
+
+.all:hover {
+    background-color: #740303;
+}
+
+
