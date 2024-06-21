@@ -37,6 +37,9 @@ function addTasksToPage(arrayOfTasks) {
   arrayOfTasks.forEach((task) => {
     let taskContainer = document.createElement("div");
     taskContainer.classList.add("task");
+    if(task.status){
+      taskContainer.className = "task done"
+    }
     taskContainer.setAttribute("data-id", task.id);
     let p = document.createElement("p");
     p.appendChild(document.createTextNode(task.title));
